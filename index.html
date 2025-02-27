@@ -60,15 +60,7 @@
     <link rel="stylesheet" href="./files/css/projects.css" />
     <link rel="stylesheet" href="./files/css/section.css" />
   </head>
-  <body onload="
-    loadHTML('header', 'header.html');
-    loadHTML('about', 'about.html');
-    loadHTML('skills', 'skills.html');
-    loadHTML('projects', 'projects.html');
-    loadHTML('friends', 'friends.html');
-    loadHTML('contact', 'contact.html');
-    loadHTML('footer', 'footer.html');
-                        " id="main">
+  <body id="main">
     <div id="header"></div>
     <div id="about"></div>
     <div id="skills"></div>
@@ -80,6 +72,23 @@
         <img src="./files/icons/icon2.svg" alt="Arrow-up icon" />
       </a>
     </div>
+    <script>
+      function loadHTML(id, file) {
+        fetch(file)
+            .then(response => response.text())
+            .then(data => document.getElementById(id).innerHTML = data);
+    }
+      window.onload = function() {
+        loadHTML('header', './files/html-parts/header.html');
+        loadHTML('about', './files/html-parts/about.html');
+        loadHTML('skills', './files/html-parts/skills.html');
+        loadHTML('projects', './files/html-parts/projects.html');
+        loadHTML('friends', './files/html-parts/friends.html');
+        loadHTML('contact', './files/html-parts/contact.html');
+        loadHTML('footer', './files/html-parts/footer.html');
+        console.log('HTML loaded');
+      };
+    </script>
     <script src="./files/js/script.js"></script>
   </body>
 </html>
