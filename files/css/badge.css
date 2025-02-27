@@ -1,0 +1,32 @@
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background: #333;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+  }
+  
+  .badge img {
+    margin-right: 5px;
+    height: 20px;
+  }
+.badge.js { background: #f7df1e; color: #000; }
+.badge.java { background: #007396; }
+.badge.cpp { background: #00599c; }
+.badge.node { background: #68a063; }
+.badge.react-native { background: #61dafb; color: #000; }
+.badge.esp32 { background: #0078D7; }
+.badge.cmd, .badge.batch { background: #6e6e6e; }
+.badge.git { background: #f34f29; }
+.badge.tool { background: #444; }

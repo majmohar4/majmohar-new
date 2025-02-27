@@ -1,0 +1,42 @@
+.friends-section {
+    padding: 50px;
+    text-align: left;
+    color: var(--text);
+  }
+  
+  .friends-section h2 {
+    font-size: var(--text-header2);
+    margin-bottom: 20px;
+  }
+  
+  .friends-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+  }
+  
+  .friend-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .friend-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .friend-name {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .friend-description {
+    font-size: 16px;
+    color: var(--text);
+    opacity: 0.8;
+  }

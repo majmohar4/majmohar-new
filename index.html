@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maj Mohar</title>
+    <link rel="stylesheet" href="./files/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="icon" href="./files/images/square_128x128.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+    ></script>
+    <script type="text/javascript" src="./files/js/splittext.js"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker.register("/files/js/service-worker.js").then(
+            function (registration) {
+              console.log(
+                "ServiceWorker registration successful with scope: ",
+                registration.scope
+              );
+            },
+            function (err) {
+              console.log("ServiceWorker registration failed: ", err);
+            }
+          );
+        });
+      }
+    </script>
+    <link rel="manifest" href="/manifest.json" />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-1R8JL1DLVQ"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-1R8JL1DLVQ");
+    </script>
+  </head>
+  <body onload="
+    loadHTML('header', 'header.html');
+    loadHTML('about', 'about.html');
+    loadHTML('skills', 'skills.html');
+    loadHTML('projects', 'projects.html');
+    loadHTML('contact', 'contact.html');
+    loadHTML('footer', 'footer.html');
+">
+    <div id="header"></div>
+    <div id="about"></div>
+    <div id="skills"></div>
+    <div id="projects"></div>
+    <div id="contact"></div>
+    <div id="footer"></div>
+</body>
+</html>
+  <body id="main">
+    <div class="header-image">
+    <header>
+      <img
+        src="./files/images/IMG_2983.jpg"
+        class="prof_image"
+        alt="Profile Picture"
+      />
+      <h1>Maj Mohar</h1>
+      <div id="rolling-stones">
+        <p>Student</p>
+        <p>Developer</p>
+        <p>Musician</p>
+        <p>Radio Amateur</p>
+        <p>Versatilist</p>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="icons">
+        <a href="#about">
+          <img
+            src="./files/icons/icon.svg"
+            alt="Arrow-down icon"
+            class="scroll-down"
+          />
+        </a>
+      </div>
+    </header>
+    </div>
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="description">
+        <p>
+          I'm a third-year student at Vegova, deeply immersed in the technical
+          gymnasium program, where I explore technology and creativity.
+          Alongside my studies, I'm learning piano at music school for the 7th
+          year and continuing. I also have a little experience in programming.
+        </p>
+        <p>
+          In my free time, I express my creativity through piano and guitar
+          playing.
+        </p>
+      </div>
+    </section>
+    <section id="posnetki">
+      <div class="videi">
+        <iframe
+          width="420"
+          height="315"
+          class="youtube-video"
+          src="https://www.youtube.com/embed/c_5o7RdhAA4"
+        >
+        </iframe>
+        <iframe
+          src="https://youtube.com/embed/8JdwZ2xW09U"
+          width="420"
+          height="315"
+          class="youtube-video"
+        ></iframe>
+      </div>
+    </section>
+    <section id="skills">
+      <h2>My Skills</h2>
+      <p>
+        I enjoy working with JavaScript, Java, and C++ (focused on Arduino & ESP32 framework). I have experience with various tools and frameworks that help me build efficient projects.
+      </p>
+    
+      <h3>Languages I’m Learning:</h3>
+      <div class="badges">
+        <span class="badge js"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" width="20"> JavaScript</span>
+        <span class="badge java"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" width="20"> Java</span>
+        <span class="badge cpp"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" width="20"> C++ (Arduino & ESP32)</span>
+      </div>
+    
+      <h3>Languages & Technologies I’ve Used:</h3>
+      <div class="badges">
+        <span class="badge node"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" width="20"> Node.js</span>
+        <span class="badge react-native"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Native" width="20"> React Native</span>
+        <span class="badge cmd">CMD</span>
+        <span class="badge batch">Batch</span>
+        <span class="badge git"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" width="20"> Git</span>
+        <span class="badge cpp"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" width="20"> C++</span>
+      </div>
+    
+      <h3>Frameworks & Libraries:</h3>
+      <div class="badges">
+        <span class="badge react-native"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Native" width="20"> React Native</span>
+        <span class="badge esp32">ESP32 Framework</span>
+        <span class="badge node"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" width="20"> Node.js</span>
+      </div>
+    
+      <h3>Tools I Use:</h3>
+      <div class="badges">
+        <a href="https://alt-tab-macos.netlify.app/" class="badge tool">Alt-Tab</a>
+        <a href="https://github.com/p0deje/Maccy" class="badge tool">Maccy</a>
+        <a href="https://apphousekitchen.com/aldente/" class="badge tool">AlDente</a>
+        <a href="https://github.com/grishka/NearDrop" class="badge tool">NearDrop</a>
+        <a href="https://www.raycast.com/" class="badge tool">Raycast</a>
+        <a href="https://coderunnerapp.com/" class="badge tool">CodeRunner</a>
+        <a href="https://code.visualstudio.com/" class="badge tool">VS Code</a>
+        <a href="https://brave.com/" class="badge tool">Brave</a>
+        <a href="https://localsend.org/" class="badge tool">LocalSend</a>
+      </div>
+    </section>
+  
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="description">
+        <ul>
+          <li>
+            <h3>KrokyPlus</h3>
+            <p>
+              My friends and I always forget to order us food for school, so we,
+              in our laziness, made an AI to order it for us.
+            </p>
+            <p>
+              <img src="./files/icons/js-icon.svg" alt="JS Icon" />
+              <img src="./files/icons/react-icon.svg" alt="ReactJS Icon" />
+              <img src="./files/icons/css-icon.svg" alt="CSS Icon" />
+              <img src="./files/icons/html-icon.svg" alt="HTML Icon" />
+            </p>
+            <p>Github and webpage:</p>
+            <div class="links">
+              <p>
+                <a href="https://krokyplus.si/" target="_blank">
+                  <img
+                    src="./files/icons/website-icon.svg"
+                    alt="Website Icon"
+                  />
+                </a>
+              </p>
+              <p>
+                <a href="https://github.com/username/repo" target="_blank">
+                  <img src="./files/icons/github-icon.svg" alt="GitHub Icon" />
+                </a>
+              </p>
+            </div>
+          </li>
+          <li>
+            <h3>Assembly Arduino Sound Effects</h3>
+            <p>
+              Developed an Arduino project where I utilized assembly language to
+              create sound effects for various events. This project helped me
+              deepen my understanding of low-level programming and embedded
+              systems while exploring audio manipulation.
+            </p>
+            <p>GitHub:</p>
+            <p>
+              <a
+                href="https://github.com/majmohar4/Assembly-projekt"
+                target="_blank"
+              >
+                <img src="./files/icons/github-icon.svg" alt="GitHub Icon" />
+              </a>
+            </p>
+          </li>
+          <li>
+            <h3>Batch (Basic) Project</h3>
+            <p>
+              Created a simple batch script for school work that is annoying to
+              any use.
+            </p>
+            <p>GitHub:</p>
+            <p>
+              <a href="https://github.com/majmohar4/Lab_vaje" target="_blank">
+                <img src="./files/icons/github-icon.svg" alt="GitHub Icon" />
+              </a>
+            </p>
+          </li>
+          <li>
+            <h3>This website MajMohar.eu</h3>
+            <p>Wrote simple portfolio.</p>
+            <p>GitHub:</p>
+            <p>
+              <a
+                href="https://github.com/majmohar4/majmohar.eu"
+                target="_blank"
+              >
+                <img src="./files/icons/github-icon.svg" alt="GitHub Icon" />
+              </a>
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section id="download-cv">
+      <h2>Download My CV</h2>
+      <div class="cv-links">
+        <a href="./files/pdf/Maj Mohar CV eng.pdf" download>
+          <button>Download CV in English</button>
+        </a>
+        <a href="./files/pdf/Maj Mohar CV slo.pdf" download>
+          <button>Download CV in Slovenian</button>
+        </a>
+      </div>
+    </section>
+    <section id="friends" class="friends-section">
+      <h2>Friends I Know</h2>
+      <p>Here are some of my friends who also have websites. Check them out!</p>
+      <div class="friends-list">
+        <div class="friend-item">
+          <span class="friend-name">Lin Čadež</span>
+          <span class="friend-description">Backend developer, drone pilot & BlueJ lover</span>
+        </div>
+        <div class="friend-item">
+          <span class="friend-name">Maj Mohar</span>
+          <span class="friend-description">Macbook enthusiast</span>
+        </div>
+        <div class="friend-item">
+          <span class="friend-name">Andriy Gryban</span>
+          <span class="friend-description">Web developer & designer</span>
+        </div>
+        <div class="friend-item">
+          <span class="friend-name">Dorian Mahnič Dobrovoljc</span>
+          <span class="friend-description">Java lover & amateur radio operator</span>
+        </div>
+      </div>
+    </section>
+    <div class="header-image">
+    <section id="contact">
+      <h2>Find Me Online</h2>
+      <ul class="contact-list">
+        <li class="contact-item">
+          <a href="https://github.com/majmohar4" target="_blank">
+            <img src="./files/icons/github-icon.svg" alt="GitHub" />
+            <span>GitHub</span>
+          </a>
+        </li>
+        <li class="contact-item">
+          <a href="https://www.youtube.com/@majmohar7537" target="_blank">
+            <img src="./files/icons/youtube-icon.svg" alt="YouTube" />
+            <span>YouTube</span>
+          </a>
+        </li>
+        <li class="contact-item">
+          <a href="mailto:maj.mohar4@gmail.com">
+            <img src="./files/icons/gmail-icon.svg" alt="Gmail" />
+            <span>Gmail</span>
+          </a>
+        </li>
+        <li class="contact-item">
+          <a
+            href="https://discord.com/users/1014769833688182825"
+            target="_blank"
+          >
+            <img src="./files/icons/discord-icon.svg" alt="Discord" />
+            <span>Discord</span>
+          </a>
+        </li>
+        <li class="contact-item">
+          <a
+            href="https://www.linkedin.com/in/maj-mohar-393984305/"
+            target="_blank"
+          >
+            <img src="./files/icons/linkedin-icon.svg" alt="LinkedIn" />
+            <span>LinkedIn</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    </div>
+    <div id="scroll-up" class="scroll-up">
+      <a href="#main">
+        <img src="./files/icons/icon2.svg" alt="Arrow-up icon" />
+      </a>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 Maj Mohar</p>
+    </footer>
+    <script src="./files/js/script.js"></script>
+  </body>
+</html>
