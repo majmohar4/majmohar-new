@@ -30,6 +30,7 @@
   --text-header2: 6vh;
   --text-header3: 6vh;
   --text-footer: 1rem;
+  --background-image: url('../images/background.webp');
 }
 
 body {
@@ -48,12 +49,13 @@ header {
   height: 100vh;
 }
 .header-image {
-  background-image: url('../images/background.jpg');
+  background-image: url('../images/background.webp');
   background-color: black;
   background-repeat: no-repeat;
-  background-attachment: initial;
+  background-attachment: fixed;
   background-position: center;
-  background-size: cover;}
+  background-size: cover;
+}
 .prof_image {
   max-width: 100%;
   width: 15rem;

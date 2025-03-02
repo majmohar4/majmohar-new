@@ -27,10 +27,7 @@ section#projects ul {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 20px;
-    background: rgb(20, 117, 187);
-    background-color: rgb(20, 117, 187);
-    background: radial-gradient(rgb(169, 221, 214) 0%, rgba(145, 173, 194) 46%, rgba(193, 184, 200) 100%);
-  }
+    }
   
   section#projects li {
     width: calc(33% - 20px);
