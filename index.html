@@ -18,7 +18,7 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
     ></script>
     <script type="text/javascript" src="./files/js/splittext.js"></script>
-    <!-- <script>
+    <script>
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", function () {
           navigator.serviceWorker.register("/files/js/service-worker.js").then(
@@ -34,7 +34,7 @@
           );
         });
       }
-    </script> -->
+    </script>
     <link rel="manifest" href="/manifest.json" />
     <!-- Google tag (gtag.js) -->
     <script
@@ -77,7 +77,7 @@
         fetch(file)
             .then(response => response.text())
             .then(data => document.getElementById(id).innerHTML = data);
-    }
+      }
       window.onload = function() {
         loadHTML('header', './files/html-parts/header.html');
         loadHTML('about', './files/html-parts/about.html');
@@ -85,9 +85,12 @@
         loadHTML('projects', './files/html-parts/projects.html');
         loadHTML('friends', './files/html-parts/friends.html');
         loadHTML('contact', './files/html-parts/contact.html');
-        console.log('HTML loaded');
+        
+        // Load the script after the HTML parts are loaded
+        const script = document.createElement('script');
+        script.src = './files/js/script.js';
+        document.body.appendChild(script);
       };
     </script>
-    <script src="./files/js/script.js"></script>
   </body>
 </html>

@@ -27,7 +27,7 @@
   --ggs: 1;
   --text-size: 1.75rem;
   --text-header1: 12vh;
-  --text-header2: 6vh;
+  --text-header2: 5vh;
   --text-header3: 6vh;
   --text-footer: 1rem;
   --background-image: url('../images/background.webp');
@@ -45,17 +45,19 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: 40vh;
   align-items: center;
-  height: 100vh;
+  height: 50vh;
 }
 .header-image {
-  background-image: url('../images/background.webp');
-  background-color: black;
+  background-image: url('../images/abstract.webp');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+  position: flex;
 }
+
 .prof_image {
   max-width: 100%;
   width: 15rem;
@@ -142,7 +144,7 @@ footer {
   }
   nav {
     flex-wrap: nowrap;
-    margin-top: 1vh;
+    padding-top: 1vh;
     margin-bottom: 1vh;
     flex-direction: column;
   }
