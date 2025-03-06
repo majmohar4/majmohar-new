@@ -1,0 +1,7 @@
+footer {
+    margin-top: 10vh;
+    padding: 20px;
+    text-align: center;
+    font-size: var(--text-footer);
+  }
+  

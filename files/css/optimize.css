@@ -1,0 +1,59 @@
+@media screen and (max-width: 768px) {
+    :root {
+      --text-size: 3vh;
+      --text-header1: 8vh;
+      --text-header2: 4.5vh;
+      --text-header3: 4vh;
+      --text-footer: 1rem;
+    }
+    header {
+      margin-top: 1vh;
+    }
+    header h1 {
+      font-size: var(--text-header1);
+      padding-bottom: 7vh;
+    }
+    nav {
+      flex-wrap: nowrap;
+      padding-top: 1vh;
+      margin-bottom: 1vh;
+      flex-direction: column;
+    }
+    nav ul {
+      display: flex;
+      gap: 10px;
+    }
+    .scroll-down {
+      margin-top: 10vh;
+      height: 8vh;
+    }
+    section {
+      padding: 30px;
+    }
+    .rolling-stones {
+      margin: 100vh;
+    }
+    section#projects ul {
+      flex-direction: column;
+      width: 100vh;
+    }
+  
+    section#projects ul li {
+      width: 100vh;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .videi {
+      flex-direction: column;
+      margin-top: 0;
+    }
+    .youtube-video {
+      width: 90vh;
+    }
+  }
+  .posnetki {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    padding-top: 0;
+  }
