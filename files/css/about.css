@@ -58,3 +58,15 @@
   background: var(--color3);
   transform: scale(1.05);
 }
+
+/* section#about {
+  background-color: #B7C3F3;
+} */
+
+
+ 
+.prof_image {
+  max-width: 100%;
+  border-radius: 50%;
+  text-align: center;
+}
