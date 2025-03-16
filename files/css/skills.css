@@ -36,3 +36,6 @@
   justify-content: center;
   margin-bottom: 10vh;
 }
+.badge p{
+  margin: 0;
+}

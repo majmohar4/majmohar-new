@@ -59,5 +59,16 @@ header {
   .scroll-div{
     margin-top: 80vh;
   }
+
+.language-switch{
+  display: flex;
+  margin-left: 0;
+  margin-top: 20%;
+  overflow: hidden;
+  padding: 10px;
+  height: 10vh;
+  color: white;
+  filter: invert(1);
+}
   
   

@@ -1,4 +1,5 @@
 const scrollUpIcon = document.getElementById("scroll-up");
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 window.addEventListener("scroll", () => {
   if (window.pageYOffset > 200) {
@@ -9,11 +10,18 @@ window.addEventListener("scroll", () => {
 });
 
 const titles = gsap.utils.toArray("p");
-if (titles.length === 0) {
-  console.error("No <p> elements found for animation.");
-} else {
-  console.log(`${titles.length} <p> elements found for animation.`);
-}
+
+/* gsap.to('.nav-bar', {
+  scrollTrigger: {
+    trigger: '.nav-bar',
+    start: 'top top',
+    end: '1000%',
+    markers: true,
+    scrub: true,
+    pin: '.nav-bar',
+  },
+  x: -100,
+}); */
 
 const t1 = gsap.timeline();
 titles.slice(0, 4).forEach((title, i) => {
@@ -41,7 +49,6 @@ titles.slice(0, 4).forEach((title, i) => {
   );
 });
 
-console.log("hello");
 
 const fifth = document.querySelectorAll("p")[4];
 if (!fifth) {
