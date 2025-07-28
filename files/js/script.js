@@ -67,3 +67,14 @@ if (!fifth) {
     "<"
   );
 }
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const mobileNav = document.querySelector('.mobile-nav');
+
+    if (hamburgerMenu && mobileNav) {
+        hamburgerMenu.addEventListener('click', () => {
+            mobileNav.classList.toggle('active');
+        });
+    }
+});
