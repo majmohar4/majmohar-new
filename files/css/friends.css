@@ -16,33 +16,38 @@
   display: block;
   text-decoration: none;
   color: inherit;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(9, 107, 144, 0.16));
-  border-radius: 24px;
-  padding: clamp(22px, 5vw, 30px);
-  box-shadow: 0 20px 45px rgba(4, 43, 68, 0.26);
+  border-radius: 34px;
+  padding: clamp(24px, 5vw, 34px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(145deg, rgba(6, 30, 48, 0.7), rgba(6, 30, 48, 0.52));
+  box-shadow: 0 18px 48px rgba(4, 28, 46, 0.32);
   overflow: hidden;
-  transition: transform 0.28s ease, box-shadow 0.28s ease;
-  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .friend-card::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at top right, rgba(161, 204, 220, 0.38), transparent 60%);
-  opacity: 0;
-  transition: opacity 0.28s ease;
+  background: radial-gradient(80% 140% at 110% 0%, rgba(161, 204, 220, 0.24), transparent 65%),
+    radial-gradient(70% 120% at 0% 100%, rgba(255, 255, 255, 0.12), transparent 70%);
+  opacity: 0.6;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translate3d(-6px, -6px, 0);
+  z-index: 0;
 }
 
 .friend-card:hover,
 .friend-card:focus-visible {
-  transform: translateY(-3px);
-  box-shadow: 0 24px 52px rgba(4, 43, 68, 0.32);
+  transform: translateY(-4px);
+  box-shadow: 0 24px 58px rgba(4, 28, 46, 0.38);
+  border-color: rgba(161, 204, 220, 0.45);
 }
 
 .friend-card:hover::after,
 .friend-card:focus-visible::after {
-  opacity: 1;
+  opacity: 0.9;
+  transform: translate3d(0, 0, 0);
 }
 
 .friend-card:focus-visible {
@@ -56,7 +61,7 @@
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  gap: clamp(16px, 4vw, 22px);
+  gap: clamp(18px, 4vw, 24px);
 }
 
 .friend-text {
@@ -67,27 +72,28 @@
 }
 
 .friend-avatar {
-  width: 56px;
-  height: 56px;
-  border-radius: 18px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
   display: grid;
   place-items: center;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.35), rgba(9, 107, 144, 0.55));
-  color: rgba(4, 43, 68, 0.85);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.75), rgba(161, 204, 220, 0.8));
+  color: rgba(4, 43, 68, 0.82);
   font-weight: 700;
   letter-spacing: 0.06em;
   font-size: 1.05rem;
-  box-shadow: 0 10px 20px rgba(4, 43, 68, 0.25);
+  box-shadow: 0 10px 24px rgba(4, 43, 68, 0.3);
 }
 
 .friend-name {
-  font-size: clamp(1.1rem, 3vw, 1.35rem);
-  margin-bottom: 4px;
+  font-size: clamp(1.12rem, 3.2vw, 1.36rem);
+  margin-bottom: 2px;
 }
 
 .friend-description {
-  font-size: clamp(0.95rem, 2.5vw, 1.1rem);
-  color: rgba(255, 255, 255, 0.78);
+  font-size: clamp(0.96rem, 2.4vw, 1.1rem);
+  color: rgba(255, 255, 255, 0.76);
+  line-height: 1.5;
 }
 
 .friend-arrow {
@@ -107,6 +113,7 @@
     grid-template-columns: auto 1fr;
     grid-template-rows: auto auto;
     align-items: start;
+    gap: clamp(16px, 6vw, 22px);
   }
 
   .friend-arrow {
@@ -116,13 +123,12 @@
 
 @media (max-width: 480px) {
   .friend-card {
-    padding: clamp(20px, 9vw, 26px);
+    padding: clamp(20px, 9vw, 28px);
   }
 
   .friend-avatar {
     width: 52px;
     height: 52px;
-    border-radius: 16px;
     font-size: 1rem;
   }
 }
