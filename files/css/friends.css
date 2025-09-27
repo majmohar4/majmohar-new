@@ -1,42 +1,147 @@
 .friends-section {
-    padding: 50px;
-    text-align: left;
-    color: var(--text);
+  padding: clamp(56px, 12vw, 120px) clamp(18px, 9vw, 140px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(28px, 4vw, 48px);
+  text-align: center;
+  color: var(--text);
+}
+
+.friends-section h2 {
+  font-size: clamp(2.4rem, 5vw, var(--text-header2));
+  letter-spacing: 0.04em;
+}
+
+.friends-intro {
+  max-width: 640px;
+  font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.friends-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: clamp(20px, 4vw, 32px);
+  width: min(1040px, 100%);
+}
+
+.friend-card {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(9, 107, 144, 0.15));
+  border-radius: 24px;
+  padding: clamp(24px, 5vw, 32px);
+  box-shadow: 0 20px 45px rgba(4, 43, 68, 0.28);
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  backdrop-filter: blur(10px);
+}
+
+.friend-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(161, 204, 220, 0.4), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.friend-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 26px 55px rgba(4, 43, 68, 0.35);
+}
+
+.friend-card:hover::after {
+  opacity: 1;
+}
+
+.friend-card:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.7);
+  outline-offset: 6px;
+  transform: translateY(-4px);
+}
+
+.friend-card-content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: clamp(16px, 4vw, 22px);
+}
+
+.friend-text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+
+.friend-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.35), rgba(9, 107, 144, 0.55));
+  color: rgba(4, 43, 68, 0.85);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  font-size: 1.05rem;
+  box-shadow: 0 10px 20px rgba(4, 43, 68, 0.25);
+}
+
+.friend-name {
+  font-size: clamp(1.1rem, 3vw, 1.35rem);
+  margin-bottom: 4px;
+}
+
+.friend-description {
+  font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.friend-arrow {
+  font-size: clamp(1.4rem, 4vw, 1.8rem);
+  color: rgba(255, 255, 255, 0.7);
+  transition: transform 0.35s ease, color 0.35s ease;
+}
+
+.friend-card:hover .friend-arrow {
+  transform: translateX(6px);
+  color: rgba(255, 255, 255, 0.95);
+}
+
+@media (max-width: 720px) {
+  .friends-section {
+    padding: clamp(44px, 14vw, 72px) clamp(16px, 8vw, 36px);
+    gap: clamp(24px, 6vw, 36px);
   }
-  
-  .friends-section h2 {
-    font-size: var(--text-header2);
-    margin-bottom: 20px;
+
+  .friend-card-content {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    align-items: start;
   }
-  
-  .friends-list {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    max-width: 600px;
+
+  .friend-arrow {
+    display: none;
   }
-  
-  .friend-item {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 15px 20px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: background-color 0.3s ease;
+}
+
+@media (max-width: 480px) {
+  .friend-card {
+    padding: clamp(20px, 9vw, 26px);
   }
-  
-  .friend-item:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+
+  .friend-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    font-size: 1rem;
   }
-  
-  .friend-name {
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
-  .friend-description {
-    font-size: 16px;
-    color: var(--text);
-    opacity: 0.8;
-  }
+}
