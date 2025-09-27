@@ -1,6 +1,25 @@
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.slika-div,
+.text-div {
+  display: flex;
+  justify-content: center;
+  flex: 1 1 280px;
+}
+
+.text-div {
+  max-width: 520px;
+}
+
 .description {
-    margin: 30px;
-  }
+  margin: 30px;
+}
 .description p {
   margin-bottom: 10px;
   line-height: 1.5;
@@ -64,7 +83,30 @@
 
  
 .prof_image {
-  max-width: 100%;
+  width: min(60vw, 280px);
   border-radius: 50%;
   text-align: center;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;
+  }
+
+  .text-div {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .description {
+    margin: 0;
+    text-align: center;
+  }
+
+  .prof_image {
+    width: min(70vw, 220px);
+  }
 }
