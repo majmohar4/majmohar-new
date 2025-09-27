@@ -1,21 +1,13 @@
-section#about {
-  padding: clamp(56px, 10vw, 120px) clamp(18px, 8vw, 140px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: clamp(32px, 4vw, 56px);
-}
-
-section#about h2 {
-  font-size: clamp(2.4rem, 5vw, var(--text-header2));
-  text-align: center;
-  letter-spacing: 0.03em;
+.about-panel {
+  display: grid;
+  gap: clamp(32px, 5vw, 52px);
 }
 
 .about-content {
   position: relative;
   width: min(960px, 100%);
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.16), rgba(9, 107, 144, 0.18));
+  margin: 0 auto;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.16), rgba(9, 107, 144, 0.22));
   border-radius: 28px;
   padding: clamp(28px, 6vw, 60px);
   display: grid;
@@ -122,7 +114,7 @@ section#about h2 {
 }
 
 .cv-links button {
-  background: var(--color2);
+  background: rgba(9, 107, 144, 0.92);
   border: none;
   padding: 15px 28px;
   font-size: clamp(1.05rem, 2.5vw, 1.25rem);
@@ -131,14 +123,19 @@ section#about h2 {
   color: var(--text);
   font-weight: 600;
   letter-spacing: 0.04em;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-  box-shadow: 0 10px 25px rgba(9, 107, 144, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  box-shadow: 0 10px 25px rgba(9, 107, 144, 0.28);
 }
 
 .cv-links button:hover {
-  background: var(--color3);
-  transform: translateY(-2px);
-  box-shadow: 0 16px 35px rgba(9, 107, 144, 0.4);
+  background: rgba(161, 204, 220, 0.9);
+  transform: translateY(-1px);
+  box-shadow: 0 16px 32px rgba(9, 107, 144, 0.32);
+}
+
+.cv-links button:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.7);
+  outline-offset: 4px;
 }
 
 @media (max-width: 900px) {
@@ -157,10 +154,6 @@ section#about h2 {
 }
 
 @media (max-width: 600px) {
-  section#about {
-    padding: clamp(48px, 12vw, 80px) clamp(16px, 6vw, 40px);
-  }
-
   .about-content {
     padding: clamp(24px, 8vw, 40px);
     gap: clamp(20px, 6vw, 32px);

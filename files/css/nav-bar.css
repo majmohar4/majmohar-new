@@ -1,74 +1,79 @@
-nav {
-    background: var(--background);
-    color: var(--text);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: var(--text-header2);
-    overflow: hidden;
-    z-index: 10;
-    margin-top: 0;
-    position: absolute;
-    top: 0;
-    padding-top: 3vh;
-  }
-  nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  
-  nav ul li {
+.nav-bar {
+  position: sticky;
+  top: clamp(16px, 5vw, 32px);
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 clamp(18px, 8vw, 80px);
+}
+
+.nav-bar ul {
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(12px, 3vw, 28px);
+  padding: clamp(12px, 3vw, 18px) clamp(24px, 6vw, 36px);
+  margin: 0;
+  border-radius: 999px;
+  background: rgba(9, 107, 144, 0.24);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 14px 36px rgba(4, 43, 68, 0.28);
+  backdrop-filter: blur(10px);
+}
+
+.nav-bar ul li {
+  position: relative;
+}
+
+.nav-bar ul li a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: clamp(0.95rem, 2.6vw, 1.1rem);
+  letter-spacing: 0.12em;
+  transition: color 0.25s ease;
+}
+
+.nav-bar ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.8);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.25s ease;
+}
+
+.nav-bar ul li a:hover,
+.nav-bar ul li a:focus-visible {
+  color: #fff;
+}
+
+.nav-bar ul li a:hover::after,
+.nav-bar ul li a:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.nav-bar ul li a:focus-visible {
+  outline: none;
+}
+
+#rolling-stones {
+  max-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .nav-bar {
     position: relative;
-    overflow: hidden;
-    padding: 10px;
+    top: 0;
+    padding: clamp(18px, 8vw, 40px);
   }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: var(--text);
-    padding: 10px;
-    transition: color 0.7s; /* Add transition property */
-  }
-  
-  nav ul li a:hover {
-    color: var(--text2);
-  }
-  
-  nav ul li a:hover::after {
-    content: "";
-    display: block;
+
+  .nav-bar ul {
     width: 100%;
-    height: 2px;
-    background: var(--text2);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transition: width 0.7s; /* Add transition property */
+    justify-content: center;
   }
-
-
-  #rolling-stones {
-    max-width: 100%;
-    max-height: 5vh;
-    padding-bottom: 5vh;
-    font-size: 2em;
-    text-align: center;
-    color: blue;
-    white-space: nowrap;
-    max-height: 100vh;
-  }
-  #rolling-stones p {
-    white-space: nowrap;
-    font-size: 1.1em;
-    text-align: center;
-    color: var(--color2);
-    margin: 0;
-    line-height: 0;
-    &:nth-of-type(5) {
-      color: var(--color4);
-    }
-  }
+}

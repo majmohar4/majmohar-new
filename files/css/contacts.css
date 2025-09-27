@@ -1,42 +1,72 @@
-.contact-list {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 20px;
+.contact-panel {
+  display: grid;
+  gap: clamp(28px, 5vw, 42px);
+}
+
+.contact-grid {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: clamp(16px, 4vw, 28px);
+  width: min(900px, 100%);
+  margin: 0 auto;
+}
+
+.contact-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(9, 107, 144, 0.18));
+  border-radius: 20px;
+  box-shadow: 0 16px 36px rgba(4, 43, 68, 0.22);
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
+  backdrop-filter: blur(10px);
+}
+
+.contact-card a {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: clamp(16px, 4vw, 22px);
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: clamp(1rem, 2.4vw, 1.15rem);
+  letter-spacing: 0.03em;
+}
+
+.contact-card img {
+  width: 28px;
+  height: 28px;
+}
+
+.contact-card span {
+  font-weight: 600;
+}
+
+.contact-card:hover,
+.contact-card:focus-within {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 44px rgba(4, 43, 68, 0.28);
+}
+
+.contact-card a:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.7);
+  outline-offset: 4px;
+  border-radius: 20px;
+}
+
+.site-footer {
+  text-align: center;
+  padding: clamp(24px, 6vw, 36px) clamp(16px, 6vw, 32px);
+  font-size: var(--text-footer);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.site-footer p {
+  margin: 0;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 540px) {
+  .contact-card a {
+    padding: clamp(14px, 6vw, 18px);
   }
-  
-  .contact-item {
-    display: inline-flex;
-    align-items: center;
-    padding: 8px 12px;
-    border-radius: 8px;
-    background: #333333;
-    color: white;
-    font-weight: bold;
-    font-size: 14px;
-    text-decoration: none;
-  }
-  
-  /* .contact-item a {
-    text-decoration: none;
-    color: var(--text);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  } */
-  
-  .contact-item img {
-    width: 20px;
-    height: 20px;
-  }
-  
-  .contact-item span {
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-    text-align: center;
-    margin-bottom: 10px;
-  }
+}

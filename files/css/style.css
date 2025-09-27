@@ -5,7 +5,6 @@
   font-family: "Jersey 15", sans-serif;
   font-weight: 400;
   font-style: normal;
-
   scroll-behavior: smooth;
   max-width: 100%;
   user-select: none;
@@ -35,12 +34,11 @@
 
 body {
   color: var(--text);
-  background: rgb(20, 117, 187);
-  background-color: rgb(20, 117, 187);
-  background: radial-gradient(rgb(169, 221, 214) 0%, rgba(145, 173, 194) 46%, rgba(193, 184, 200) 100%);
-  max-width: 100%;
+  background: radial-gradient(140% 140% at 0% 0%, rgba(9, 107, 144, 0.45) 0%, rgba(4, 43, 68, 0.8) 45%),
+    radial-gradient(120% 120% at 90% 10%, rgba(161, 204, 220, 0.35) 0%, rgba(4, 43, 68, 0.9) 55%),
+    #031b2d;
+  min-height: 100vh;
 }
-
 
 @keyframes fadeIn {
   0% {
@@ -63,6 +61,7 @@ body {
   color: white;
   filter: invert(1);
 }
+
 @keyframes floatAnimation {
   0% {
     transform: translateY(0);
@@ -74,7 +73,6 @@ body {
     transform: translateY(0);
   }
 }
-
 
 .scroll-up {
   position: fixed;
@@ -89,7 +87,7 @@ body {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
+
 .show {
   opacity: 1;
 }
-

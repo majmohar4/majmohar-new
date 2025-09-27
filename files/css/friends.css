@@ -1,23 +1,6 @@
-.friends-section {
-  padding: clamp(56px, 12vw, 120px) clamp(18px, 9vw, 140px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: clamp(28px, 4vw, 48px);
-  text-align: center;
-  color: var(--text);
-}
-
-.friends-section h2 {
-  font-size: clamp(2.4rem, 5vw, var(--text-header2));
-  letter-spacing: 0.04em;
-}
-
-.friends-intro {
-  max-width: 640px;
-  font-size: clamp(1.05rem, 2.5vw, 1.25rem);
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.8);
+.friends-panel {
+  display: grid;
+  gap: clamp(28px, 5vw, 44px);
 }
 
 .friends-grid {
@@ -25,6 +8,7 @@
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: clamp(20px, 4vw, 32px);
   width: min(1040px, 100%);
+  margin: 0 auto;
 }
 
 .friend-card {
@@ -32,12 +16,12 @@
   display: block;
   text-decoration: none;
   color: inherit;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(9, 107, 144, 0.15));
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(9, 107, 144, 0.16));
   border-radius: 24px;
-  padding: clamp(24px, 5vw, 32px);
-  box-shadow: 0 20px 45px rgba(4, 43, 68, 0.28);
+  padding: clamp(22px, 5vw, 30px);
+  box-shadow: 0 20px 45px rgba(4, 43, 68, 0.26);
   overflow: hidden;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
   backdrop-filter: blur(10px);
 }
 
@@ -45,24 +29,25 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at top right, rgba(161, 204, 220, 0.4), transparent 60%);
+  background: radial-gradient(circle at top right, rgba(161, 204, 220, 0.38), transparent 60%);
   opacity: 0;
-  transition: opacity 0.35s ease;
+  transition: opacity 0.28s ease;
 }
 
-.friend-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 26px 55px rgba(4, 43, 68, 0.35);
+.friend-card:hover,
+.friend-card:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 24px 52px rgba(4, 43, 68, 0.32);
 }
 
-.friend-card:hover::after {
+.friend-card:hover::after,
+.friend-card:focus-visible::after {
   opacity: 1;
 }
 
 .friend-card:focus-visible {
   outline: 3px solid rgba(255, 255, 255, 0.7);
   outline-offset: 6px;
-  transform: translateY(-4px);
 }
 
 .friend-card-content {
@@ -102,26 +87,22 @@
 
 .friend-description {
   font-size: clamp(0.95rem, 2.5vw, 1.1rem);
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.78);
 }
 
 .friend-arrow {
-  font-size: clamp(1.4rem, 4vw, 1.8rem);
+  font-size: clamp(1.35rem, 4vw, 1.7rem);
   color: rgba(255, 255, 255, 0.7);
-  transition: transform 0.35s ease, color 0.35s ease;
+  transition: transform 0.28s ease, color 0.28s ease;
 }
 
-.friend-card:hover .friend-arrow {
-  transform: translateX(6px);
-  color: rgba(255, 255, 255, 0.95);
+.friend-card:hover .friend-arrow,
+.friend-card:focus-visible .friend-arrow {
+  transform: translateX(4px);
+  color: rgba(255, 255, 255, 0.94);
 }
 
 @media (max-width: 720px) {
-  .friends-section {
-    padding: clamp(44px, 14vw, 72px) clamp(16px, 8vw, 36px);
-    gap: clamp(24px, 6vw, 36px);
-  }
-
   .friend-card-content {
     grid-template-columns: auto 1fr;
     grid-template-rows: auto auto;
