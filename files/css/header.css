@@ -1,68 +1,70 @@
-header {
-    /* margin-top: 40px; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* margin-top: 40vh; */
-    align-items: center;
-    height: 100vh;
-  }
-  .header-image {
-    background-image: url('../images/abstract.webp');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    position: flex;
-  }
-
-  header h1 {
-    font-size: var(--text-header1);
-    text-align: center;
-    margin-top: 5vh;
-    overflow: hidden;
-    padding-bottom: 10vh;
-    z-index: 10;
-  }
-  
-  .title {
-    margin: 20px;
-    font-size: var(--text-header1);
-    text-align: left;
-  }
-  .text-div{
-    width: 80%;
-  }
-  .slika-div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 20vw;
-    margin: 2%;
-  }
-
-  .mal-div-center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    text-align: center;
-  }
-
-  .scroll-div{
-    margin-top: 80vh;
-  }
-
-.language-switch{
+.header-image {
+  position: relative;
+  min-height: 100vh;
+  background-image: url('../images/abstract.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   display: flex;
-  margin-left: 0;
-  margin-top: 20%;
-  overflow: hidden;
-  padding: 10px;
-  height: 10vh;
-  color: white;
-  filter: invert(1);
+  align-items: stretch;
 }
-  
-  
+
+.header-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(4, 43, 68, 0.65) 0%, rgba(4, 43, 68, 0.35) 45%, rgba(9, 107, 144, 0.25) 100%);
+  backdrop-filter: blur(4px);
+}
+
+header {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(32px, 8vw, 56px);
+  padding: clamp(90px, 12vw, 140px) clamp(18px, 8vw, 80px) clamp(48px, 10vw, 96px);
+  text-align: center;
+}
+
+header h1 {
+  font-size: clamp(3.5rem, 9vw, var(--text-header1));
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.mal-div-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(18px, 4vw, 28px);
+}
+
+#rolling-stones {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: clamp(1.2rem, 3.2vw, 1.6rem);
+  color: rgba(161, 204, 220, 0.92);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+#rolling-stones p {
+  margin: 0;
+  color: inherit;
+}
+
+.scroll-div {
+  margin-top: clamp(40px, 10vw, 80px);
+}
+
+@media (max-width: 768px) {
+  .header-image {
+    background-attachment: scroll;
+  }
+}

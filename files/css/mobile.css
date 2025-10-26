@@ -1,61 +1,42 @@
-/* Hamburger menu styles */
+/* Hamburger menu styles (reserved for future use) */
 .hamburger-menu {
-    display: none;
-    cursor: pointer;
-    padding: 15px;
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    z-index: 10000;
+  display: none;
+  cursor: pointer;
+  padding: 15px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 10000;
 }
 
 .hamburger-menu .bar {
-    width: 25px;
-    height: 3px;
-    background-color: var(--text);
-    margin: 5px 0;
-    transition: 0.4s;
+  width: 25px;
+  height: 3px;
+  background-color: var(--text);
+  margin: 5px 0;
+  transition: 0.4s;
 }
 
-/* Mobile navigation menu styles */
-.mobile-nav {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: 9999;
-    text-align: center;
-    padding-top: 60px;
-}
-
-.mobile-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-.mobile-nav ul li {
-    padding: 15px 0;
-}
-
-.mobile-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 24px;
-}
-
+/* Mobile navigation adjustments */
 @media screen and (max-width: 768px) {
-    .nav-bar {
-        display: none;
-    }
+  .nav-bar {
+    padding: clamp(14px, 7vw, 28px) clamp(16px, 8vw, 36px);
+  }
 
-    .hamburger-menu {
-        display: block;
-    }
+  .nav-bar ul {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(10px, 5vw, 18px);
+  }
+}
 
-    .mobile-nav.active {
-        display: block;
-    }
+@media screen and (max-width: 520px) {
+  .nav-bar ul {
+    padding: clamp(10px, 6vw, 16px) clamp(18px, 7vw, 26px);
+  }
+
+  .nav-bar ul li a {
+    letter-spacing: 0.08em;
+  }
 }

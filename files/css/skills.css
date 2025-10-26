@@ -1,41 +1,73 @@
-.badges {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 15px;
-  }
-  
-  .badge {
-    display: inline-flex;
-    align-items: center;
-    padding: 8px 12px;
-    border-radius: 8px;
-    background: #333;
-    color: white;
-    font-weight: bold;
-    font-size: 14px;
-    text-decoration: none;
-  }
-  
-  .badge img {
-    margin-right: 5px;
-    height: 20px;
-  }
-.badge.js { background: #f7df1e; color: #000; }
-.badge.java { background: #007396; }
-.badge.cpp { background: #00599c; }
-.badge.node { background: #68a063; }
-.badge.react-native { background: #61dafb; color: #000; }
-.badge.esp32 { background: #0078D7; }
-.badge.cmd, .badge.batch { background: #6e6e6e; }
-.badge.git { background: #f34f29; }
-.badge.tool { background: #444; }
-
-.icons {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 10vh;
+.skills-groups {
+  display: grid;
+  gap: clamp(24px, 5vw, 36px);
 }
-.badge p{
+
+.skill-group {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(9, 107, 144, 0.18));
+  border-radius: 22px;
+  padding: clamp(20px, 5vw, 32px);
+  box-shadow: 0 18px 40px rgba(4, 43, 68, 0.24);
+  backdrop-filter: blur(8px);
+  display: grid;
+  gap: clamp(16px, 4vw, 22px);
+}
+
+.skill-group h3 {
+  font-size: clamp(1.3rem, 3.6vw, 1.6rem);
+  letter-spacing: 0.02em;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 15px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(6px);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.badge img {
+  height: 22px;
+  width: 22px;
+  object-fit: contain;
+}
+
+.badge:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.badge p {
   margin: 0;
+}
+
+@media (min-width: 960px) {
+  .skills-groups {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 540px) {
+  .skill-group {
+    padding: clamp(18px, 8vw, 24px);
+  }
+
+  .badge {
+    padding: 8px 14px;
+    font-size: 0.9rem;
+  }
 }
